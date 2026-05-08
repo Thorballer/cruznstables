@@ -667,10 +667,21 @@ h1, h2, h3, h4, h5, h6 {
 .service-area {
   padding: 5rem 0;
   background: var(--cream-dark);
+  position: relative;
+}
+
+.service-area::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(250,249,247,0.85), rgba(250,249,247,0.85)),
+              url('../images/paddock.png') center/cover no-repeat;
+  z-index: 0;
 }
 
 .service-area .section-inner {
-  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .service-area .section-subtitle {
